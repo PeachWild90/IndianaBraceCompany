@@ -15,7 +15,7 @@ namespace IBC.WebMVC
 
             routes.MapRoute(
                 name: "Default",
-                url: "{controller}/{action}/{id}",
+                url: "{controller}/{action}/{id}", //THIS IS WHAT BUILDS OUT THE URL WE SEE ON THE WEBPAGE
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
         }

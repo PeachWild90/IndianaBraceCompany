@@ -93,5 +93,42 @@ namespace IBC.Services
                     };
             }
         }
+
+        public bool UpdateFaceMask(FaceMaskEdit model)
+        {
+            using(var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .FaceMasks
+                        .Single(e => e.FaceMaskId == model.FaceMaskId && e.OwnerId == _userId);
+
+                entity.Style = model.Style;
+                entity.Personalization = model.Personalization;
+                entity.Color = model.Color;
+                entity.Height = model.Height;
+                entity.Weight = model.Weight;
+                entity.Sport = model.Sport;
+                entity.Quantity = model.Quantity;
+                entity.ModifiedUtc = DateTimeOffset.UtcNow;
+
+                return ctx.SaveChanges() == 1;
+            }
+        }
+
+        public bool DeleteNote(int faceMaskId)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                           .FaceMasks
+                           .Single(e => e.FaceMaskId == faceMaskId && e.OwnerId == _userId);
+
+                ctx.FaceMasks.Remove(entity);
+
+                return ctx.SaveChanges() == 1;
+            }
+        }
     }
 }

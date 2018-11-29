@@ -274,6 +274,9 @@
     <Content Include="Views\X1Blade\Create.cshtml" />
     <Content Include="Views\TKE\Create.cshtml" />
     <Content Include="Views\FaceMask\Details.cshtml" />
+    <Content Include="Views\FaceMask\Edit.cshtml" />
+    <Content Include="Views\FaceMask\Delete.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\DateTimeOffset.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
