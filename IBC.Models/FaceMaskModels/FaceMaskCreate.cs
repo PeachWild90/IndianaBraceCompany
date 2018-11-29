@@ -10,10 +10,9 @@ namespace IBC.Models.FaceMaskModels
 {
     public class FaceMaskCreate
     {
-        [Key]
-        public int FaceMaskId { get; set; }
+        
         [Required]
-        public Model Model { get; set; }
+        public Style Style { get; set; }
         [Required]
         public Personalization Personalization { get; set; }
         [Required]

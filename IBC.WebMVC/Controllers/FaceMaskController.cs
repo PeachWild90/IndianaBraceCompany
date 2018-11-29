@@ -7,10 +7,10 @@ using System.Web.Mvc;
 
 namespace IBC.WebMVC.Controllers
 {
+    [Authorize]
     public class FaceMaskController : Controller
     {
         // GET: FaceMask
-        [Authorize]
         public ActionResult Index()                 //ActionResult = return type, allows us to return a View() method, which corresponds to the FaceMaskController
         {
             var model = new FaceMaskListItem[0];    //initializing new instance of FaceMaskListItem as an IEnumerable(with the [0] syntax)

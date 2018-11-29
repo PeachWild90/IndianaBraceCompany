@@ -26,7 +26,7 @@ namespace IBC.Services
                 new FaceMask() //this creates an instance of FaceMask !!
                 {
                     OwnerId = _userId,
-                    Model = model.Model,
+                    Style = model.Style,
                     Personalization = model.Personalization,
                     Color = model.Color,
                     Height = model.Height,
@@ -55,7 +55,7 @@ namespace IBC.Services
                                     new FaceMaskListItem
                                     {
                                         FaceMaskId = e.FaceMaskId,
-                                        Model = e.Model,
+                                        Model = e.Style,
                                         Personalization = e.Personalization,
                                         Color = e.Color,
                                         Height = e.Height,

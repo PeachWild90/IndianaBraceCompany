@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace IBC.data
 {
     //facemask enums
-    public enum Model { Hoosier, Raptor, Madrid, Jaws}
+    public enum Style { Hoosier, Raptor, Madrid, Jaws}
     public enum Personalization {[Display(Name = "Broken Nose")] BrokenNose , [Display(Name = "Right Orbit Fracture")] OrbitRight, [Display(Name = "Left Orbit Fracture")] OrbitLeft, [Display(Name = "Broken Nose with Right Orbit Fracture")] BNOR, [Display(Name = "Broken Nose with Left Orbit Fracture")] BNOL, [Display(Name = "Left TMJ Fracture")] TMJLeft, [Display(Name = "Right TMJ Fracture")] TMJRight, [Display(Name = "Left Cheek Fracture")] CheekLeft, [Display(Name = "Right Cheek Fracture")] CheekRight, [Display(Name = "Lower Jaw Fracture - Left")] LowerJawLeft, [Display(Name = "Lower Jaw Fracture - Right")] LowerJawRight, [Display(Name = "Front Jaw Fracture")] FrontJaw }
     public enum Color { Clear, Black }
 
@@ -21,7 +21,7 @@ namespace IBC.data
         public Guid OwnerId { get; set; }
 
         [Required]
-        public Model Model { get; set; }
+        public Style Style { get; set; }
 
         [Required]
         public Personalization Personalization { get; set; }

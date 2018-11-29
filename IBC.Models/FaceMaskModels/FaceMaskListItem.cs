@@ -13,7 +13,7 @@ namespace IBC.Models.FaceMaskModels
     {
         public int FaceMaskId { get; set; }
         public int Quantity { get; set; }
-        public Model Model { get; set; }
+        public Style Model { get; set; }
         public Personalization Personalization { get; set; }
         public Color Color { get; set; }
         public string Height { get; set; }
