@@ -6,6 +6,7 @@ using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.Google;
 using Owin;
 using IBC.WebMVC.Models;
+using IBC.Data;
 
 namespace IBC.WebMVC
 {

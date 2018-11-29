@@ -9,6 +9,7 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using IBC.WebMVC.Models;
+using IBC.Data;
 
 namespace IBC.WebMVC.Controllers
 {
