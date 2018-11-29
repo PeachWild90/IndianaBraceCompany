@@ -68,6 +68,10 @@
     <Compile Include="Migrations\201811282044244_FootEnum.Designer.cs">
       <DependentUpon>201811282044244_FootEnum.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201811291912148_Model2Style.cs" />
+    <Compile Include="Migrations\201811291912148_Model2Style.Designer.cs">
+      <DependentUpon>201811291912148_Model2Style.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TKE.cs" />
@@ -86,6 +90,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201811282044244_FootEnum.resx">
       <DependentUpon>201811282044244_FootEnum.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811291912148_Model2Style.resx">
+      <DependentUpon>201811291912148_Model2Style.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
