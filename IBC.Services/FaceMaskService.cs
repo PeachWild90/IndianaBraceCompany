@@ -42,7 +42,7 @@ namespace IBC.Services
             }
         }
                             //we defined this earlier. It is connected to the view/css!
-        public IEnumerable<FaceMaskListItem> GetNotes() //This method shows us all the FaceMasks that belong to a specific user...
+        public IEnumerable<FaceMaskListItem> GetFaceMasks() //This method shows us all the FaceMasks that belong to a specific user...
         {
             using (var ctx = new ApplicationDbContext())
             {
@@ -66,6 +66,31 @@ namespace IBC.Services
                           );
 
                 return query.ToArray();
+            }
+        }
+
+        public FaceMaskDetail GetFaceMaskById(int faceMaskId)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .FaceMasks
+                        .Single(e => e.FaceMaskId == faceMaskId && e.OwnerId == _userId);
+                return
+                    new FaceMaskDetail
+                    {
+                        FaceMaskId = entity.FaceMaskId,
+                        Style = entity.Style,
+                        Personalization = entity.Personalization,
+                        Color = entity.Color,
+                        Height = entity.Height,
+                        Weight = entity.Weight,
+                        Sport = entity.Sport,
+                        Quantity = entity.Quantity,
+                        CreatedUtc = entity.CreatedUtc,
+                        ModifiedUtc = entity.ModifiedUtc
+                    };
             }
         }
     }

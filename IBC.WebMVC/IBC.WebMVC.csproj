@@ -273,6 +273,7 @@
     <Content Include="Views\FaceMask\Create.cshtml" />
     <Content Include="Views\X1Blade\Create.cshtml" />
     <Content Include="Views\TKE\Create.cshtml" />
+    <Content Include="Views\FaceMask\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -17,7 +17,7 @@ namespace IBC.WebMVC.Controllers
         {                                           //Index method displays all notes for the current users
             var userId = Guid.Parse(User.Identity.GetUserId());
             var service = new FaceMaskService(userId);
-            var model = service.GetNotes();    //initializing new instance of FaceMaskListItem as an IEnumerable(with the [0] syntax)
+            var model = service.GetFaceMasks();    //initializing new instance of FaceMaskListItem as an IEnumerable(with the [0] syntax)
             return View(model);                     //when we added the List template for our view, it created IEnumerable requiremens for our list view
         }
 
@@ -44,6 +44,14 @@ namespace IBC.WebMVC.Controllers
             };
 
             ModelState.AddModelError("", "Note could not be created.");
+
+            return View(model);
+        }
+
+        public ActionResult Details(int id)
+        {
+            var svc = CreateFaceMaskService();
+            var model = svc.GetFaceMaskById(id);
 
             return View(model);
         }
