@@ -13,7 +13,7 @@ namespace IBC.Models.X1BladeModels
         public int X1BladeId { get; set; }
         public Injury Injury { get; set; }
         public string FootSize { get; set; }
-        public bool Foot { get; set; }
+        public Foot Foot { get; set; }
         public int Quantity { get; set; }
 
         [Display(Name = "Created")]
