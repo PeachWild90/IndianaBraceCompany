@@ -1,0 +1,42 @@
+﻿@model IBC.Models.X1BladeModels.X1BladeDetail
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>X1BladeDetail</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.X1BladeId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.X1BladeId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FootSize)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FootSize)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Quantity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Quantity)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

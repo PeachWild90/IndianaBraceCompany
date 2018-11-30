@@ -62,6 +62,7 @@
     <Compile Include="TKEModels\TKECreate.cs" />
     <Compile Include="TKEModels\TKEListItem.cs" />
     <Compile Include="X1BladeModels\X1BladeCreate.cs" />
+    <Compile Include="X1BladeModels\X1BladeDetail.cs" />
     <Compile Include="X1BladeModels\X1BladeListItem.cs" />
   </ItemGroup>
   <ItemGroup>

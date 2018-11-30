@@ -58,5 +58,25 @@ namespace IBC.Services
                 return query.ToArray();
             }
         }
+
+        public X1BladeDetail GetX1BladeById(int x1BladeId)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .X1Blades
+                        .Single(e => e.X1BladeId == x1BladeId && e.OwnerId == _userId);
+                return
+                    new X1BladeDetail
+                    {
+                        X1BladeId = entity.X1BladeId,
+                        Injury = entity.Injury,
+                        FootSize = entity.FootSize,
+                        Foot = entity.Foot,
+                        Quantity = entity.Quantity
+                    };
+            }
+        }
     }
 }

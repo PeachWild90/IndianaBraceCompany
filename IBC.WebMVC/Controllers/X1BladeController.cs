@@ -34,14 +34,23 @@ namespace IBC.WebMVC.Controllers
         {
             if (!ModelState.IsValid) return View(model); //method makes sure the model is valid
 
-            //var service = CreateX1BladeService();
+            var service = CreateX1BladeService();
 
-            //if (service.CreateX1Blade(model))
-            //{
-            //    return RedirectToAction("Index");
-            //};
+            if (service.CreateX1Blade(model))
+            {
+                TempData["SaveResult"] = "Your X-1 Blade order was created!";
+                return RedirectToAction("Index");
+            };
 
             ModelState.AddModelError("", "X1-Blade could not be entered...");
+
+            return View(model);
+        }
+
+        public ActionResult Details(int id)
+        {
+            var svc = CreateX1BladeService();
+            var model = svc.GetX1BladeById(id);
 
             return View(model);
         }
