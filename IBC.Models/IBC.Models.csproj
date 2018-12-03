@@ -60,7 +60,9 @@
     <Compile Include="FaceMaskModels\FaceMaskListItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TKEModels\TKECreate.cs" />
+    <Compile Include="TKEModels\TKEDetail.cs" />
     <Compile Include="TKEModels\TKEListItem.cs" />
+    <Compile Include="TKEModels\TKE_Edit.cs" />
     <Compile Include="X1BladeModels\X1BladeCreate.cs" />
     <Compile Include="X1BladeModels\X1BladeDetail.cs" />
     <Compile Include="X1BladeModels\X1BladeEdit.cs" />

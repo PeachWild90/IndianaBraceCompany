@@ -280,6 +280,9 @@
     <Content Include="Views\X1Blade\Details.cshtml" />
     <Content Include="Views\X1Blade\Edit.cshtml" />
     <Content Include="Views\X1Blade\Delete.cshtml" />
+    <Content Include="Views\TKE\Details.cshtml" />
+    <Content Include="Views\TKE\Edit.cshtml" />
+    <Content Include="Views\TKE\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -35,8 +35,62 @@ namespace IBC.Services //push and pull TKE's from the database
             }
         }
 
-       public IEnumerable
+        public IEnumerable<TKEListItem> GetTKEs()
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var query =
+                    ctx
+                        .TKEs
+                        .Where(e => e.OwnerId == _userId)
+                        .Select(
+                            e =>
+                                new TKEListItem
+                                {
+                                    TKEId = e.TKEId,
+                                    Reason = e.Reason,
+                                    Quantity = e.Quantity,
+                                }
+                       );
+
+                return query.ToArray();
+            }
+        }
+
+        public TKEDetail GetTKEById(int tKEId)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .TKEs
+                        .Single(e => e.TKEId == tKEId && e.OwnerId == _userId);
+                return
+                    new TKEDetail
+                    {
+                        TKEId = entity.TKEId,
+                        Reason = entity.Reason,
+                        Quantity = entity.Quantity
+                    };
+            }
+        }
+
+        public bool UpdateTKE(TKE_Edit model)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .TKEs
+                        .Single(e => e.TKEId == model.TKEId && e.OwnerId == _userId);
+
+                entity.Reason = model.Reason;
+                entity.Quantity = model.Quantity;
+
+                return ctx.SaveChanges() == 1;
+            }
+        }
     }
 
-    
+
 }
