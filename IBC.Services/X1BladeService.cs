@@ -98,5 +98,20 @@ namespace IBC.Services
                 return ctx.SaveChanges() == 1;
             }
         }
+
+        public bool DeleteX1Blade(int x1BladeId)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .X1Blades
+                        .Single(e => e.X1BladeId == x1BladeId && e.OwnerId == _userId);
+
+                ctx.X1Blades.Remove(entity);
+
+                return ctx.SaveChanges() == 1;
+            }
+        }
     }
 }

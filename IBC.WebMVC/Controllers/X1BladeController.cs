@@ -104,6 +104,20 @@ namespace IBC.WebMVC.Controllers
             return View(model);
         }
 
+        [HttpPost]
+        [ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeletePost(int id)
+        {
+            var service = CreateX1BladeService(); //add in validation here
+
+            service.DeleteX1Blade(id); //error for this goes away once we add code to the Service (aka add a delete method)
+
+            TempData["SaveResult"] = "Your X1 Blade was deleted";
+
+            return RedirectToAction("Index");
+        }
+
         private X1BladeService CreateX1BladeService()
         {
             var userId = Guid.Parse(User.Identity.GetUserId());
