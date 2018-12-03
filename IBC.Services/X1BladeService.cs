@@ -27,6 +27,7 @@ namespace IBC.Services
                     Injury = model.Injury,
                     FootSize = model.FootSize,
                     Foot = model.Foot,
+                    Quantity = model.Quantity
                 };
 
             using (var ctx = new ApplicationDbContext()) //saves it to DB
@@ -51,7 +52,8 @@ namespace IBC.Services
                                     X1BladeId = e.X1BladeId,
                                     Injury = e.Injury,
                                     FootSize = e.FootSize,
-                                    Foot = e.Foot
+                                    Foot = e.Foot,
+                                    Quantity = e.Quantity
                                 }
                         );
 
@@ -76,6 +78,24 @@ namespace IBC.Services
                         Foot = entity.Foot,
                         Quantity = entity.Quantity
                     };
+            }
+        }
+
+        public bool UpdateX1Blade(X1BladeEdit model)
+        {
+            using(var ctx  = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .X1Blades
+                        .Single(e => e.X1BladeId == model.X1BladeId && e.OwnerId == _userId);
+
+                entity.Injury = model.Injury;
+                entity.FootSize = model.FootSize;
+                entity.Foot = model.Foot;
+                entity.Quantity = model.Quantity;
+
+                return ctx.SaveChanges() == 1;
             }
         }
     }

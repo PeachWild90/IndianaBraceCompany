@@ -55,6 +55,37 @@ namespace IBC.WebMVC.Controllers
             return View(model);
         }
 
+        public ActionResult Edit(int id)
+        {
+            var service = CreateX1BladeService();
+            var detail = service.GetX1BladeById(id);
+            var model =
+                new X1BladeEdit
+                {
+                    X1BladeId = detail.X1BladeId,
+                    Injury = detail.Injury,
+                    FootSize = detail.FootSize,
+                    Foot = detail.Foot,
+                    Quantity = detail.Quantity
+                };
+            return View(model);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit(int id, X1BladeEdit model)
+        {
+            if (!ModelState.IsValid) return View(model);
+
+            if(model.X1BladeId != id)
+            {
+                ModelState.AddModelError("", "Id Mismatch");
+                return View(model);
+            }
+
+            return View();
+        }
+
         private X1BladeService CreateX1BladeService()
         {
             var userId = Guid.Parse(User.Identity.GetUserId());
