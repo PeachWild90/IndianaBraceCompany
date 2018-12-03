@@ -83,7 +83,25 @@ namespace IBC.WebMVC.Controllers
                 return View(model);
             }
 
+            var service = CreateX1BladeService();
+
+            if (service.UpdateX1Blade(model))
+            {
+                TempData["SaveResult"] = "Your X1-Blade Order was Updated.";
+                return RedirectToAction("Index");
+            }
+
+            ModelState.AddModelError("", "Your note could not be updated.");
             return View();
+        }
+
+        [ActionName("Delete")]
+        public ActionResult Delete(int id)
+        {
+            var svc = CreateX1BladeService();
+            var model = svc.GetX1BladeById(id);
+
+            return View(model);
         }
 
         private X1BladeService CreateX1BladeService()
