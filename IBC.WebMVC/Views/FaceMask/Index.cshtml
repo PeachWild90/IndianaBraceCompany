@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<IBC.Models.FaceMaskModels.FaceMaskListItem>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Cart";
 }
 
 <h2>Index</h2>
@@ -72,7 +72,9 @@
             <td>
                 @Html.ActionLink("Checkout", "Checkout", new { id = item.FaceMaskId }) @*Needs CartModel.CartListItem.CartId {get ; set ;}*@
             </td>
-            <
+            <td>
+                
+            </td>
         </tr>
     }
 

@@ -198,6 +198,7 @@
     <Compile Include="Controllers\FaceMaskController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\MasterController.cs" />
     <Compile Include="Controllers\TKEController.cs" />
     <Compile Include="Controllers\X1BladeController.cs" />
     <Compile Include="Global.asax.cs">
@@ -283,6 +284,7 @@
     <Content Include="Views\TKE\Details.cshtml" />
     <Content Include="Views\TKE\Edit.cshtml" />
     <Content Include="Views\TKE\Delete.cshtml" />
+    <Content Include="Views\Master\Master_Cart_Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

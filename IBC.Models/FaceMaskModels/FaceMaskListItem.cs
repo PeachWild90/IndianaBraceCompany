@@ -18,7 +18,7 @@ namespace IBC.Models.FaceMaskModels
         public Personalization Personalization { get; set; }
         public Color Color { get; set; }
         public string Height { get; set; }
-        [Display(Name ="fatty")] //THIS CHANGES THE WAY IT SHOWS UP IN THE VIEW
+        [Display(Name ="fatty")] 
         public string Weight { get; set; }
         public string Sport { get; set; }
 
