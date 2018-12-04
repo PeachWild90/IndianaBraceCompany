@@ -13,6 +13,7 @@ namespace IBC.Models.FaceMaskModels
     {
         public int FaceMaskId { get; set; }
         public int Quantity { get; set; }
+        public int Price { get; set; }
         public Style Model { get; set; }
         public Personalization Personalization { get; set; }
         public Color Color { get; set; }
@@ -21,12 +22,5 @@ namespace IBC.Models.FaceMaskModels
         public string Weight { get; set; }
         public string Sport { get; set; }
 
-        [Display(Name="Created")]
-        public DateTimeOffset CreatedUtc { get; set; }
-
-        public override string ToString()
-        {
-            return base.ToString();
-        }
     }
 }

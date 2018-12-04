@@ -122,6 +122,11 @@ namespace IBC.WebMVC.Controllers
             return RedirectToAction("Index");
         }
 
+        //get view
+
+        //post
+        //public ActionResult Checkout(int ownerId)
+
         private FaceMaskService CreateFaceMaskService()
         {
             var userId = Guid.Parse(User.Identity.GetUserId());

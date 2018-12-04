@@ -100,6 +100,20 @@ namespace IBC.WebMVC.Controllers
             return View(model);
         }
 
+        [HttpPost]
+        [ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeletePost(int id)
+        {
+            var service = CreateTKEService();
+
+            service.DeleteTKE(id);
+
+            TempData["SaveResult"] = "Your TKE was deleted";
+
+            return RedirectToAction("Index");
+        }
+
         private TKEService CreateTKEService()
         {
             var userId = Guid.Parse(User.Identity.GetUserId());

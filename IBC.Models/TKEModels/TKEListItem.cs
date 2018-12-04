@@ -11,15 +11,8 @@ namespace IBC.Models.TKEModels
     {
         public int TKEId { get; set; }
         public int Quantity { get; set; }
+        public int Price { get; set; }
         public string Reason { get; set; }
-
-        [Display(Name = "Created")]
-        public DateTimeOffset CreatedUtc { get; set; }
-
-        public override string ToString()
-        {
-            return base.ToString();
-        }
 
     }
 }

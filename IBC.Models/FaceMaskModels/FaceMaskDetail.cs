@@ -18,10 +18,6 @@ namespace IBC.Models.FaceMaskModels
         public string Weight { get; set; }
         public string Sport { get; set; }
         public int Quantity { get; set; }
-        [Display(Name="Created")]
-        public DateTimeOffset CreatedUtc { get; set; }
-        [Display(Name="Modified")]
-        public DateTimeOffset? ModifiedUtc { get; set; }
-        public override string ToString() => $"[{FaceMaskId}] {Style}";
+        
     }
 }

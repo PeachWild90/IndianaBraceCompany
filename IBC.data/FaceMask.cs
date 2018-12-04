@@ -42,10 +42,7 @@ namespace IBC.data
         [Required]
         public int Quantity { get; set; }
 
-        [Required]
-
-        public DateTimeOffset CreatedUtc { get; set; } 
-        public DateTimeOffset? ModifiedUtc { get; set; }
+        
 
     }
 }

@@ -90,6 +90,21 @@ namespace IBC.Services //push and pull TKE's from the database
                 return ctx.SaveChanges() == 1;
             }
         }
+
+        public bool DeleteTKE(int tKEId)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .TKEs
+                        .Single(e => e.TKEId == tKEId && e.OwnerId == _userId);
+
+                ctx.TKEs.Remove(entity);
+
+                return ctx.SaveChanges() == 1;
+            }
+        }
     }
 
 

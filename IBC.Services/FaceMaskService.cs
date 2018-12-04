@@ -88,8 +88,6 @@ namespace IBC.Services
                         Weight = entity.Weight,
                         Sport = entity.Sport,
                         Quantity = entity.Quantity,
-                        CreatedUtc = entity.CreatedUtc,
-                        ModifiedUtc = entity.ModifiedUtc
                     };
             }
         }
@@ -110,7 +108,6 @@ namespace IBC.Services
                 entity.Weight = model.Weight;
                 entity.Sport = model.Sport;
                 entity.Quantity = model.Quantity;
-                entity.ModifiedUtc = DateTimeOffset.UtcNow;
 
                 return ctx.SaveChanges() == 1;
             }

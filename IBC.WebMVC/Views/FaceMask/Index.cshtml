@@ -40,9 +40,6 @@
         <th>
             @Html.DisplayNameFor(model => model.Sport)
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.CreatedUtc)
-        </th>
         <th></th>
     </tr>
 
@@ -68,13 +65,14 @@
                 @Html.DisplayFor(modelItem => item.Sport)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.CreatedUtc)
-            </td>
-            <td>
                 @Html.ActionLink("Edit", "Edit", new { id = item.FaceMaskId }) |
                 @Html.ActionLink("Details", "Details", new { id = item.FaceMaskId }) |
                 @Html.ActionLink("Delete", "Delete", new { id = item.FaceMaskId }) |
             </td>
+            <td>
+                @Html.ActionLink("Checkout", "Checkout", new { id = item.FaceMaskId }) @*Needs CartModel.CartListItem.CartId {get ; set ;}*@
+            </td>
+            <
         </tr>
     }
 
