@@ -284,7 +284,8 @@
     <Content Include="Views\TKE\Details.cshtml" />
     <Content Include="Views\TKE\Edit.cshtml" />
     <Content Include="Views\TKE\Delete.cshtml" />
-    <Content Include="Views\Master\Master_Cart_Index.cshtml" />
+    <Content Include="Views\Master\Create.cshtml" />
+    <Content Include="Views\Master\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

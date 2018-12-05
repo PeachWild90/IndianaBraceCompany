@@ -20,6 +20,8 @@
     </div>
 }
 
+}
+
 <table class="table">
     <tr>
         <th>
@@ -68,14 +70,17 @@
                 @Html.ActionLink("Edit", "Edit", new { id = item.FaceMaskId }) |
                 @Html.ActionLink("Details", "Details", new { id = item.FaceMaskId }) |
                 @Html.ActionLink("Delete", "Delete", new { id = item.FaceMaskId }) |
+                @Html.ActionLink("Checkout","Create","Master", new { id = item.FaceMaskId }, null)
             </td>
             <td>
-                @Html.ActionLink("Checkout", "Checkout", new { id = item.FaceMaskId }) @*Needs CartModel.CartListItem.CartId {get ; set ;}*@
+                @*Needs CartModel.CartListItem.CartId {get ; set ;}*@
             </td>
-            <td>
-                
-            </td>
+            <td></td>
+
+            
         </tr>
     }
+
+
 
 </table>

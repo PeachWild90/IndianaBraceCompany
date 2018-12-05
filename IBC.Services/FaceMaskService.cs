@@ -113,7 +113,7 @@ namespace IBC.Services
             }
         }
 
-        public bool DeleteNote(int faceMaskId)
+        public bool DeleteFaceMask(int faceMaskId)
         {
             using (var ctx = new ApplicationDbContext())
             {

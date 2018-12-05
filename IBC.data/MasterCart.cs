@@ -1,15 +1,17 @@
-﻿using IBC.data;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace IBC.Models.MasterModel
+namespace IBC.data
 {
-    public class MasterList
+   public class MasterCart
     {
+        [Key]
+        public int MasterCartId { get; set; }
+        public Guid OwnerId { get; set; }
         //X1
         public int X1BladeId { get; set; }
         public Injury Injury { get; set; }
@@ -28,7 +30,7 @@ namespace IBC.Models.MasterModel
         public int FaceMaskId { get; set; }
         public int FMQuantity { get; set; }
         public int FMPrice { get; set; }
-        public Style Model { get; set; }
+        public Style Style { get; set; }
         public Personalization Personalization { get; set; }
         public Color Color { get; set; }
         public string Height { get; set; }

@@ -58,7 +58,8 @@
     <Compile Include="FaceMaskModels\FaceMaskDetail.cs" />
     <Compile Include="FaceMaskModels\FaceMaskEdit.cs" />
     <Compile Include="FaceMaskModels\FaceMaskListItem.cs" />
-    <Compile Include="MasterModel\MasterList.cs" />
+    <Compile Include="MasterModel\MasterCartCreate.cs" />
+    <Compile Include="MasterModel\MasterCartList.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TKEModels\TKECreate.cs" />
     <Compile Include="TKEModels\TKEDetail.cs" />

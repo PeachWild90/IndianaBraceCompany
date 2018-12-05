@@ -115,7 +115,7 @@ namespace IBC.WebMVC.Controllers
         {
             var service = CreateFaceMaskService();
 
-            service.DeleteNote(id);
+            service.DeleteFaceMask(id);
 
             TempData["SaveResult"] = "Your FaceMask was removed";
 

@@ -37,6 +37,7 @@ namespace IBC.Data
         public DbSet<FaceMask> FaceMasks { get; set; }
         public DbSet<X1Blade> X1Blades { get; set; }
         public DbSet<TKE> TKEs { get; set; }
+        public DbSet<MasterCart> MasterCarts { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
