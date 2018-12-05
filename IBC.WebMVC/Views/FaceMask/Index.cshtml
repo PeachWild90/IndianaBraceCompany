@@ -4,7 +4,7 @@
     ViewBag.Title = "Cart";
 }
 
-<h2>Index</h2>
+<h2>Face Mask Shopping Cart</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
@@ -20,67 +20,76 @@
     </div>
 }
 
-}
 
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.FaceMaskId)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Quantity)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Color)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Height) @*Height (ft.inch.)*@
-        </th>
-        <th>
-            Weight (lbs) this is cheating
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Sport)
-        </th>
-        <th></th>
-    </tr>
 
-    @foreach (var item in Model)
-    {
+    <table class="table">
         <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.FaceMaskId)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Quantity)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Color)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Height)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Weight)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Sport)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.FaceMaskId }) |
-                @Html.ActionLink("Details", "Details", new { id = item.FaceMaskId }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.FaceMaskId }) |
-                @Html.ActionLink("Checkout","Create","Master", new { id = item.FaceMaskId }, null)
-            </td>
-            <td>
-                @*Needs CartModel.CartListItem.CartId {get ; set ;}*@
-            </td>
-            <td></td>
-
-            
+            <th>
+                @Html.DisplayNameFor(model => model.Style)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Quantity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Color)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Height) @*Height (ft.inch.)*@
+            </th>
+            <th>
+                Weight (lbs) 
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Sport)
+            </th>
+            <th>
+                <p>Price</p>
+            </th>
+            <th></th>
         </tr>
-    }
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Style)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Quantity)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Color)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Height)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Weight)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Sport)
+                </td>
+                <td><p>$249.00</p></td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.FaceMaskId }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.FaceMaskId }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.FaceMaskId }) |
+                    @Html.ActionLink("Checkout", "Index", "Master")
+                </td>
+            </tr>
+        }
+            <tr>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th>
+                    $@(Model.Count() * 249.99)
+                </th>
+                <th></th>
+            </tr>
 
 
-
-</table>
+    </table>

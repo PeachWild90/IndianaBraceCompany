@@ -4,7 +4,7 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Terminal Knee Extender</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
@@ -22,9 +22,9 @@
 }
 <table class="table">
     <tr>
-        <th>
+        @*<th>
             @Html.DisplayNameFor(model => model.TKEId)
-        </th>
+        </th>*@
         <th>
             @Html.DisplayNameFor(model => model.Quantity)
         </th>
@@ -40,9 +40,9 @@
     @foreach (var item in Model)
     {
     <tr>
-        <td>
+        @*<td>
             @Html.DisplayFor(modelItem => item.TKEId)
-        </td>
+        </td>*@
         <td>
             @Html.DisplayFor(modelItem => item.Quantity)
         </td>
@@ -60,7 +60,6 @@
     </tr>
     }
     <tr>
-        <th></th>
         <th></th>
         <th></th>
         <th>

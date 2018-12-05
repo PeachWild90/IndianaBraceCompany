@@ -1,10 +1,10 @@
 ﻿@model IBC.Models.FaceMaskModels.FaceMaskCreate
 @using IBC.Data
 @{
-    ViewBag.Title = "Create";
+    ViewBag.Title = "Clyde's Hoosier Face Masks";
 }
 
-<h2>Create</h2>
+<h2>Clyde's Hooser Face Masks</h2>
 
 
 @using (Html.BeginForm())
@@ -12,7 +12,7 @@
     @Html.AntiForgeryToken()
 
 <div class="form-horizontal">
-    <h4>FaceMaskCreate</h4>
+    <h4>EXCELLENT VISION / COMFORTABLE / 100 % FIT GUARANTEE - 5 MODELS / CALL OR TEXT CLYDE DIRECT 317-445-1475</h4>
     <hr />
     @Html.ValidationSummary(true, "", new { @class = "text-danger" })
 
@@ -90,7 +90,7 @@
 }
 
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Show Creations", "")
 </div>
 
 @section Scripts {

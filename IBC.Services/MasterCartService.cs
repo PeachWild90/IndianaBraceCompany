@@ -39,60 +39,61 @@ namespace IBC.Services
 
         public IEnumerable<MasterCartList> GetMasterCarts() //GetAllItemsForUse ??
         {
-            using (var ctx = new ApplicationDbContext())
+            using (var ctx = new ApplicationDbContext()) //snapshot of state of db
             {
-                var query =
-                    ctx
-                        .MasterCarts
-                        .Where(e => e.OwnerId == _userId)
-                        .Select(
-                             e =>
-                                    new MasterCartList
-                                    {
-                                        X1BladeId = e.X1BladeId,
-                                        TKEId = e.TKEId,
-                                        FaceMaskId = e.FaceMaskId,
-                                    }
-                          );
-                var FaceMask =
-                    ctx
-                        .FaceMasks
-                        .Where(e => e.OwnerId == _userId)
-                        .Select(
-                                e =>
-                                    new MasterCartList
-                                    {
-                                        FaceMaskId = e.FaceMaskId,
-                                    }
-                           );
-                var TKE =
-                    ctx
-                        .TKEs
-                        .Where(e => e.OwnerId == _userId)
-                        .Select(
-                                e =>
-                                    new MasterCartList
-                                    {
-                                        TKEId = e.TKEId,
-                                    }
-                                    );
-                var X1Blade =
-                    ctx
-                        .X1Blades
-                        .Where(e => e.OwnerId == _userId)
-                        .Select(
-                                e =>
-                                    new MasterCartList
-                                    {
-                                        X1BladeId = e.X1BladeId,
-                                    }
-                                    );
+                //TODO: Create variables for each data table
+                //TODO: Verify the owner ID
+                //TODO: Add objects to one list
+                //TODO: Return List
 
-                return query.ToArray();
+                List<MasterCartList> carts = new List<MasterCartList>();
+
+                var fmQuery =
+                   ctx.FaceMasks //snapshot of fm table
+                   .Where(e => e.OwnerId == _userId); //asserts we only taking out of fm when id is correct. specific collection of fm by ID
+           
+
+                var x1Query =
+                    ctx.X1Blades
+                    .Where(e => e.OwnerId == _userId);
+
+                var tkeQuery =
+                    ctx.TKEs
+                    .Where(e => e.OwnerId == _userId);
                 
+
+               foreach(var f in fmQuery) //repackaging properties into new MasterCartList object, sending it back to index
+                {
+                    carts.Add(new MasterCartList
+                    {
+                        FaceMaskId = f.FaceMaskId
+                    }
+                    );
+                }
+
+               foreach(var x in x1Query)
+                {
+                    carts.Add(new MasterCartList
+                    {
+                        X1BladeId = x.X1BladeId
+                    }
+                    );
+                }
+
+               foreach(var t in tkeQuery)
+                {
+                    carts.Add(new MasterCartList
+                    {
+                        TKEId = t.TKEId
+                    }
+                    );
+                }
+                return carts;
             }
         }
 
+       
+        //TODO: 
         //make a list of master items ?
 
         public bool DeleteMasterCart(int masterCartId)

@@ -18,10 +18,16 @@ namespace IBC.Models.FaceMaskModels
         [Required]
         public Color Color { get; set; }
         [Required]
+        [MinLength(1, ErrorMessage = "Please enter a valid height.")]
+        [MaxLength(100, ErrorMessage = "Please enter a valid height")]
         public string Height { get; set; }
         [Required]
+        [MinLength(1, ErrorMessage = "Please enter a valid weight.")]
+        [MaxLength(1000, ErrorMessage = "Please enter a valid weight")]
         public string Weight { get; set; }
         [Required]
+        [MinLength(1, ErrorMessage = "Please enter a valid sport.")]
+        [MaxLength(100, ErrorMessage = "Please enter a valid sport.")]
         public string Sport { get; set; }
         [Required]
         public int Quantity { get; set; }

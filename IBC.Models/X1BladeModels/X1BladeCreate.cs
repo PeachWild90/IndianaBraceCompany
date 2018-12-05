@@ -19,6 +19,9 @@ namespace IBC.Models.X1BladeModels
         [Required]
         public Foot Foot { get; set; }
         [Required]
+        [MinLength(1, ErrorMessage = "Please enter a valid quantity.")]
+        [MaxLength(100, ErrorMessage = "Please enter a valid quantity!")]
         public int Quantity { get; set; }
+
     }
 }

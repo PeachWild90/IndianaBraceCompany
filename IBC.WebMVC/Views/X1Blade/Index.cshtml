@@ -24,7 +24,7 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.X1BladeId)
+            @Html.DisplayNameFor(model => model.Injury)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.FootSize)
@@ -38,27 +38,36 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Injury)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FootSize)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Foot)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Quantity)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.X1BladeId }) |
+                @Html.ActionLink("Details", "Details", new { id = item.X1BladeId }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.X1BladeId }) |
+                @Html.ActionLink("Checkout", "Index", "Master")
+            </td>
+        </tr>
+    }
     <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.X1BladeId)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.FootSize)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Foot)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Quantity)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id = item.X1BladeId }) |
-            @Html.ActionLink("Details", "Details", new { id = item.X1BladeId }) |
-            @Html.ActionLink("Delete", "Delete", new { id = item.X1BladeId }) |
-            @Html.ActionLink("Checkout", "Create", "Master", new { id = item.X1BladeId }, null)
-        </td>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th>
+            $@(Model.Count() * 99)
+        </th>
+        <th></th>
     </tr>
-}
-
 </table>

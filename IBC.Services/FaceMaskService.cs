@@ -55,7 +55,7 @@ namespace IBC.Services
                                     new FaceMaskListItem
                                     {
                                         FaceMaskId = e.FaceMaskId,
-                                        Model = e.Style,
+                                        Style = e.Style,
                                         Personalization = e.Personalization,
                                         Color = e.Color,
                                         Height = e.Height,

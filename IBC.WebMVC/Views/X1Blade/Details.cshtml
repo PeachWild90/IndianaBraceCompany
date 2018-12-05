@@ -11,11 +11,19 @@
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.X1BladeId)
+            @Html.DisplayNameFor(model => model.Injury)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.X1BladeId)
+            @Html.DisplayFor(model => model.Injury)
+        </dd>
+
+        <dt>
+        @Html.DisplayNameFor(model => model.Foot)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Foot)
         </dd>
 
         <dt>
@@ -37,6 +45,6 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.x }) |
+    @Html.ActionLink("Edit", "Edit", new { id = Model.X1BladeId }) |
     @Html.ActionLink("Back to List", "Index")
 </p>

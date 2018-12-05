@@ -1,10 +1,10 @@
 ﻿@model IBC.Models.X1BladeModels.X1BladeEdit
 
 @{
-    ViewBag.Title = "Edit";
+    ViewBag.Title = "Edit Your Specs";
 }
 
-<h2>Edit</h2>
+<h2>Edit Your Specs</h2>
 
 
 @using (Html.BeginForm())
@@ -12,10 +12,26 @@
     @Html.AntiForgeryToken()
     
 <div class="form-horizontal">
-    <h4>X1BladeEdit</h4>
+    <h4>X1 Blades</h4>
     <hr />
     @Html.ValidationSummary(true, "", new { @class = "text-danger" })
     @Html.HiddenFor(model => model.X1BladeId)
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Injury, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EnumDropDownListFor(model => model.Injury, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.Injury, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Foot, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EnumDropDownListFor(model => model.Foot, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.Foot, "", new { @class = "text-danger" })
+        </div>
+    </div>
 
     <div class="form-group">
         @Html.LabelFor(model => model.FootSize, htmlAttributes: new { @class = "control-label col-md-2" })

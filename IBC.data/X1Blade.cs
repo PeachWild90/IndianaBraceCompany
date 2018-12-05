@@ -7,7 +7,22 @@ using System.Threading.Tasks;
 
 namespace IBC.data
 {
-    public enum Injury { MidFootSprainArthritis, BunionPain, GreatToePainArthritis, JonesFracture, Sesamoiditis, TurfToe, NeuromaPain, PlantarFasciitis }
+    public enum Injury {
+        [Display(Name ="Mid-Foot Sprain Arthritis")]
+        MidFootSprainArthritis,
+        [Display(Name ="Bunion Pain")]
+        BunionPain,
+        [Display(Name ="Great-Toe Pain Arthritis")]
+        GreatToePainArthritis,
+        [Display(Name ="Jones Fracture")]
+        JonesFracture, Sesamoiditis,
+        [Display(Name = "Turf Toe")]
+        TurfToe,
+        [Display(Name ="Neuroma Pain")]
+        NeuromaPain,
+        [Display(Name ="Plantar Fasciitis")]
+        PlantarFasciitis
+}
     public enum Foot { Right, Left, [Display (Name = "Right & Left")] RightLeft}
     public class X1Blade
     {
