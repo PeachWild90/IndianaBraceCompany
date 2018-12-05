@@ -18,7 +18,7 @@ namespace IBC.WebMVC.Controllers
             var userId = Guid.Parse(User.Identity.GetUserId());
             var service = new MasterCartService(userId);
             var model = service.GetMasterCarts();
-            return View();
+            return View(model);
         }
 
         public ActionResult Create()

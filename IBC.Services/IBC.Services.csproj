@@ -55,7 +55,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="FaceMaskService.cs" />
-    <Compile Include="MasterCartManager.cs" />
     <Compile Include="MasterCartService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TKEService.cs" />

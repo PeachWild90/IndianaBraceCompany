@@ -37,7 +37,7 @@ namespace IBC.Services
             }
         }
 
-        public IEnumerable<MasterCartList> GetMasterCarts()
+        public IEnumerable<MasterCartList> GetMasterCarts() //GetAllItemsForUse ??
         {
             using (var ctx = new ApplicationDbContext())
             {
@@ -50,27 +50,11 @@ namespace IBC.Services
                                     new MasterCartList
                                     {
                                         X1BladeId = e.X1BladeId,
-                                        //Injury = e.Injury,
-                                        //FootSize = e.FootSize,
-                                        //Foot = e.Foot,
-                                        //X1Quantity = e.X1Quantity,
-
                                         TKEId = e.TKEId,
-                                        //Reason = e.Reason,
-                                        //TKEQuantity = e.TKEQuantity,
-
                                         FaceMaskId = e.FaceMaskId,
-                                        //Style = e.Style,
-                                        //Personalization = e.Personalization,
-                                        //Color = e.Color,
-                                        //Height = e.Height,
-                                        //Weight = e.Weight,
-                                        //Sport = e.Sport,
-                                        //FMQuantity = e.FMQuantity
                                     }
                           );
-
-                var query2 =
+                var FaceMask =
                     ctx
                         .FaceMasks
                         .Where(e => e.OwnerId == _userId)
@@ -81,9 +65,7 @@ namespace IBC.Services
                                         FaceMaskId = e.FaceMaskId,
                                     }
                            );
-
-
-                var query3 =
+                var TKE =
                     ctx
                         .TKEs
                         .Where(e => e.OwnerId == _userId)
@@ -94,9 +76,7 @@ namespace IBC.Services
                                         TKEId = e.TKEId,
                                     }
                                     );
-
-
-                var query4 =
+                var X1Blade =
                     ctx
                         .X1Blades
                         .Where(e => e.OwnerId == _userId)
@@ -109,8 +89,11 @@ namespace IBC.Services
                                     );
 
                 return query.ToArray();
+                
             }
         }
+
+        //make a list of master items ?
 
         public bool DeleteMasterCart(int masterCartId)
         {

@@ -17,5 +17,12 @@ namespace IBC.Models.MasterModel
         public int TKEId { get; set; }
         
         public int FaceMaskId { get; set; }
+
+        public TKE TKE { get; set; }
+
+        public FaceMask FaceMask { get; set; }
+
+        public X1Blade X1Blade { get; set; }
+
     }
 }
