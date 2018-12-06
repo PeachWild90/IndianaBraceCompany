@@ -7,7 +7,7 @@
 <h2>Review Your Orders</h2>
 
 <p>
-    @Html.ActionLink("Cart", "Cart")
+    @Html.ActionLink("Back to the Front", "Master")
 </p>
 <table class="table">
     <tr>
@@ -64,9 +64,9 @@
             @Html.DisplayNameFor(model => model.Reason)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Quantity)
+            @*@Html.DisplayNameFor(model => model.Quantity)*@
         <th>
-            <p>Price</p>
+            @*<p>Price</p>*@
         </th>
     </tr>
 
@@ -80,7 +80,7 @@
                 @Html.DisplayFor(modelItem => item.Reason)
             </td>
             <td>
-                @Html.DisplayNameFor(model => model.Quantity)
+                @*@Html.DisplayNameFor(model => model.Quantity)*@
             </td>
             <td>
                 <p>$399</p>
@@ -107,11 +107,12 @@
             @Html.DisplayNameFor(model => model.Style)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Quantity)
+            @*@Html.DisplayNameFor(model => model.Quantity)*@
         </th>
         <th>
-            <p>Price</p>
+            @*<p>Price</p>*@
         </th>
+       
     </tr>
 
     @foreach (var item in Model)
@@ -124,7 +125,7 @@
                 @Html.DisplayFor(modelItem => item.Style)
             </td>
             <td>
-                @Html.DisplayNameFor(model => model.Quantity)
+                @*@Html.DisplayNameFor(model => model.Quantity)*@
             </td>
             <td>
                 <p>$249.00/p>
@@ -138,6 +139,16 @@
         <th>$@(Model.Count() * 249.99)</th>
         <th></th>
 
+    </tr>
+
+    <tr>
+        <th></th>
+        <th></th>
+        <th>
+            <p>Total Price</p>
+        </th>
+        <th>$@(Model.Count())</th>
+        <th></th>
     </tr>
 </table>
 
