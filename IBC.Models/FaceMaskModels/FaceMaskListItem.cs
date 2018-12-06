@@ -21,6 +21,7 @@ namespace IBC.Models.FaceMaskModels
         [Display(Name ="fatty")] 
         public string Weight { get; set; }
         public string Sport { get; set; }
-
+        public decimal PriceValue { get; set; } 
+        
     }
 }

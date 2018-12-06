@@ -41,8 +41,8 @@ namespace IBC.data
 
         [Required]
         public int Quantity { get; set; }
-
         
+        public decimal PriceValue { get; set; }
 
     }
 }

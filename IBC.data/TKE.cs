@@ -17,5 +17,7 @@ namespace IBC.data
         public string Reason { get; set; } //why are you using this product?
         [Required]
         public int Quantity { get; set; }
+       
+        public decimal PriceValue { get; set; }
     }
 }

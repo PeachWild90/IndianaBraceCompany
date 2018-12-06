@@ -38,5 +38,7 @@ namespace IBC.data
         public Foot Foot { get; set; }
         [Required]
         public int Quantity { get; set; }
+
+        public decimal PriceValue { get; set; }
     }
 }

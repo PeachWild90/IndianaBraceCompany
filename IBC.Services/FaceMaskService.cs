@@ -1,6 +1,7 @@
 ﻿using IBC.data;
 using IBC.Data;
 using IBC.Models.FaceMaskModels;
+using IBC.Models.PriceModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -41,6 +42,21 @@ namespace IBC.Services
                 return ctx.SaveChanges() == 1;
             }
         }
+        
+        //method needs to pull all quantities from DB, then multiply for a fixed amount
+        //public IndexView Calculate(int quantity, decimal price) 
+        //{
+        //     IndexView x = new IndexView();
+        //    var 
+                
+                   
+            
+        //    x.List = query.ToArray();
+        //    x.Price = decimal.Parse("249.99");
+
+        //    return ;
+        //}
+
                             //we defined this earlier. It is connected to the view/css!
         public IEnumerable<FaceMaskListItem> GetFaceMasks() //This method shows us all the FaceMasks that belong to a specific user...
         {
@@ -61,7 +77,8 @@ namespace IBC.Services
                                         Height = e.Height,
                                         Weight = e.Weight,
                                         Sport = e.Sport,
-                                        Quantity = e.Quantity
+                                        Quantity = e.Quantity,
+                                        PriceValue = e.Quantity * e.PriceValue
                                     }
                           );
 
