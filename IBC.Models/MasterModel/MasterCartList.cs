@@ -18,9 +18,15 @@ namespace IBC.Models.MasterModel
         
         public int FaceMaskId { get; set; }
 
+        public Style Style { get; set; }
+
+        public Injury Injury { get; set; }
+
         public int Price { get; set; }
 
         public int Quantity { get; set; }
+
+        public string Reason { get; set; }
 
         public TKE TKE { get; set; }
 
@@ -30,6 +36,6 @@ namespace IBC.Models.MasterModel
 
     }
 }
-//list master cart kust cart = bew kust naster cartkust
+
 
    

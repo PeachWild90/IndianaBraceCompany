@@ -35,6 +35,7 @@
         <th>
             @Html.DisplayNameFor(model => model.Quantity)
         </th>
+        <th>Price</th>
         <th></th>
     </tr>
 
@@ -53,6 +54,7 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Quantity)
             </td>
+            <td>$99</td>
             <td>
                 @Html.ActionLink("Edit", "Edit", new { id = item.X1BladeId }) |
                 @Html.ActionLink("Details", "Details", new { id = item.X1BladeId }) |
@@ -61,13 +63,15 @@
             </td>
         </tr>
     }
-    <tr>
-        <th></th>
-        <th></th>
-        <th></th>
-        <th>
-            $@(Model.Count() * 99)
-        </th>
-        <th></th>
-    </tr>
+        <tr>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th>
+                $@Model.Select(i => i.Quantity).Sum();                                                   @*@double total = model.Sum(model => model.quantity)*@
+                $@(Model.Count() * 99) @*find the sum of quantity properties. might be able to get a sum. something.something. more than one instance in a list*@
+            </th>
+            <th></th>
+        </tr>
 </table>

@@ -4,7 +4,7 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Review Your Orders</h2>
 
 <p>
     @Html.ActionLink("Cart", "Cart")
@@ -14,34 +14,130 @@
         <th>
             @Html.DisplayNameFor(model => model.X1BladeId)
         </th>
-      
+        <th>
+            @Html.DisplayNameFor(model => model.Injury)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Quantity)
+        </th>
+        <th>
+            <p>Price</p>
+        </th>
+
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.X1BladeId)
+            </td>
+            <td>
+                @Html.DisplayNameFor(model => model.Injury)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Quantity)
+            </td>
+            <td>
+                <p>$99</p>
+            </td>
+        </tr>
+    }
+        <tr>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th>$@(Model.Count() * 99)</th>
+            <th></th>
+
+        </tr>
+
+</table>
+
+<table class="table">
+    <tr>
         <th>
             @Html.DisplayNameFor(model => model.TKEId)
         </th>
         <th>
+            @Html.DisplayNameFor(model => model.Reason)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Quantity)
+        <th>
+            <p>Price</p>
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.TKEId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Reason)
+            </td>
+            <td>
+                @Html.DisplayNameFor(model => model.Quantity)
+            </td>
+            <td>
+                <p>$399</p>
+            </td>
+        </tr>
+    }
+
+    <tr>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th>$@(Model.Count() * 399)</th>
+        <th></th>
+
+    </tr>
+</table>
+
+<table class="table">
+    <tr>
+        <th>
             @Html.DisplayNameFor(model => model.FaceMaskId)
         </th>
-        
-        <th></th>
+        <th>
+            @Html.DisplayNameFor(model => model.Style)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Quantity)
+        </th>
+        <th>
+            <p>Price</p>
+        </th>
     </tr>
 
-@foreach (var item in Model) {
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FaceMaskId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Style)
+            </td>
+            <td>
+                @Html.DisplayNameFor(model => model.Quantity)
+            </td>
+            <td>
+                <p>$249.00/p>
+            </td>
+        </tr>
+    }
     <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.X1BladeId)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.TKEId)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.FaceMaskId)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
-        </td>
-    </tr>
-}
+        <th></th>
+        <th></th>
+        <th></th>
+        <th>$@(Model.Count() * 249.99)</th>
+        <th></th>
 
+    </tr>
 </table>
+

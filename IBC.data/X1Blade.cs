@@ -22,7 +22,7 @@ namespace IBC.data
         NeuromaPain,
         [Display(Name ="Plantar Fasciitis")]
         PlantarFasciitis
-}
+     }
     public enum Foot { Right, Left, [Display (Name = "Right & Left")] RightLeft}
     public class X1Blade
     {

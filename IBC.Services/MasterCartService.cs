@@ -37,7 +37,7 @@ namespace IBC.Services
             }
         }
 
-        public IEnumerable<MasterCartList> GetMasterCarts() //GetAllItemsForUse ??
+        public IEnumerable<MasterCartList> GetMasterCarts() 
         {
             using (var ctx = new ApplicationDbContext()) //snapshot of state of db
             {
@@ -66,7 +66,9 @@ namespace IBC.Services
                 {
                     carts.Add(new MasterCartList
                     {
-                        FaceMaskId = f.FaceMaskId
+                        FaceMaskId = f.FaceMaskId,
+                        Style = f.Style,
+                        Quantity = f.Quantity,
                     }
                     );
                 }
@@ -75,7 +77,9 @@ namespace IBC.Services
                 {
                     carts.Add(new MasterCartList
                     {
-                        X1BladeId = x.X1BladeId
+                        X1BladeId = x.X1BladeId,
+                        Injury = x.Injury,
+                        Quantity = x.Quantity
                     }
                     );
                 }
@@ -84,7 +88,9 @@ namespace IBC.Services
                 {
                     carts.Add(new MasterCartList
                     {
-                        TKEId = t.TKEId
+                        TKEId = t.TKEId,
+                        Reason = t.Reason,
+                        Quantity = t.Quantity
                     }
                     );
                 }

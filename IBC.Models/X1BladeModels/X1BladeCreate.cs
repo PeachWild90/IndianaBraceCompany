@@ -13,14 +13,14 @@ namespace IBC.Models.X1BladeModels
         [Required]
         public Injury Injury { get; set; }
         [Required]
-        [MinLength(1, ErrorMessage = "Please enter a valid shoe size.")]
-        [MaxLength(100, ErrorMessage = "Your feet are too damn big!")]
+        //[MinLength(1, ErrorMessage = "Please enter a valid shoe size.")]
+        //[MaxLength(100, ErrorMessage = "Your feet are too damn big!")]
         public string FootSize { get; set; }
         [Required]
         public Foot Foot { get; set; }
         [Required]
-        [MinLength(1, ErrorMessage = "Please enter a valid quantity.")]
-        [MaxLength(100, ErrorMessage = "Please enter a valid quantity!")]
+        //[MinLength(1, ErrorMessage = "Please enter a valid quantity.")]
+        //[MaxLength(100, ErrorMessage = "Please enter a valid quantity!")]
         public int Quantity { get; set; }
 
     }

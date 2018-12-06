@@ -4,19 +4,27 @@
     ViewBag.Title = "Delete";
 }
 
-<h2>Delete</h2>
+<h2>Delete Your Blade</h2>
 
 <h3>Are you sure you want to delete this?</h3>
 <div>
-    <h4>X1BladeDetail</h4>
+    
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.X1BladeId)
+            @Html.DisplayNameFor(model => model.Injury)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.X1BladeId)
+            @Html.DisplayFor(model => model.Injury)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Foot)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Foot)
         </dd>
 
         <dt>
@@ -42,6 +50,8 @@
 
         <div class="form-actions no-color">
             <input type="submit" value="Delete" class="btn btn-default" /> |
+            <br />
+            <br />
             @Html.ActionLink("Back to List", "Index")
         </div>
     }
