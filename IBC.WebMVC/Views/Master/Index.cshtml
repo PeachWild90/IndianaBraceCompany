@@ -29,26 +29,30 @@
 
     @foreach (var item in Model)
     {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.X1BladeId)
-            </td>
-            <td>
-                @Html.DisplayFor(model => item.Injury)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Quantity)
-            </td>
-            <td>
-                <p>$99</p>
-            </td>
-        </tr>
+        if (item.X1BladeId != 0) //OG
+        {
+
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.X1BladeId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelitem => item.Injury)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Quantity)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PriceValue)
+                </td>
+            </tr>
+        }
     }
     <tr>
         <th></th>
         <th></th>
         <th></th>
-        <th>$@(Model.Count() * 99)</th>
+        <th></th>
         <th></th>
 
     </tr>
@@ -69,6 +73,8 @@
 
     @foreach (var item in Model)
     {
+        if (item.TKEId != 0)
+        {
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.TKEId)
@@ -80,17 +86,19 @@
                 @Html.DisplayFor(modelItem => item.Quantity)
             </td>
             <td>
-                <p>$399</p>
+                @Html.DisplayFor(modelItem => item.PriceValue)
             </td>
         </tr>
+        }
     }
 
     <tr>
         <th></th>
         <th></th>
         <th></th>
-        <th>$@(Model.Count() * 399)</th>
-        <th></th>
+        @*<th>$@(Model.Count() * 399)</th>*@
+
+        <th>$@(Model.Sum(x => x.PriceValue))</th
 
     </tr>
 
@@ -112,6 +120,8 @@
 
     @foreach (var item in Model)
     {
+        if (item.FaceMaskId != 0)
+        {
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.FaceMaskId)
@@ -123,20 +133,21 @@
                 @Html.DisplayFor(model => item.Quantity)
             </td>
             <td>
-                <p>$249.00</p>
+                @Html.DisplayFor(modelItem => item.PriceValue)
             </td>
         </tr>
+        }
     }
     <tr>
         <th></th>
         <th></th>
         <th></th>
-        <th>$@(Model.Count() * 249.99)</th>
+        @*<th>$@(Model.Count() * 249.99)</th>*@
         <th></th>
 
     </tr>
 
-    <tr>
+    @*<tr>
         <th></th>
         <th></th>
         <th>
@@ -144,11 +155,11 @@
         </th>
         <th>$@(Model.Count())</th>
         <th></th>
-    </tr>
+    </tr>*@
 
-    
-   
-    
+
+
+
 </table>
 
 <div class="row" align="center">

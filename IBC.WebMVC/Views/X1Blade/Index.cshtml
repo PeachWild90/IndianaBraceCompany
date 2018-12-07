@@ -54,7 +54,7 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Quantity)
             </td>
-            <td>$99</td>
+            <td> @Html.DisplayFor(modelItem => item.PriceValue)</td>
             <td>
                 @Html.ActionLink("Edit", "Edit", new { id = item.X1BladeId }) |
                 @Html.ActionLink("Details", "Details", new { id = item.X1BladeId }) |
@@ -70,7 +70,7 @@
             <th></th>
             <th>
                                                          @*@double total = model.Sum(model => model.quantity)*@
-                $@(Model.Count() * 99) @*find the sum of quantity properties. might be able to get a sum. something.something. more than one instance in a list*@
+                 @*find the sum of quantity properties. might be able to get a sum. something.something. more than one instance in a list*@
             </th>
             <th></th>
         </tr>

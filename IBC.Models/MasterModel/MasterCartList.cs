@@ -22,7 +22,7 @@ namespace IBC.Models.MasterModel
 
         public Injury Injury { get; set; }
 
-        public int Price { get; set; }
+        public decimal PriceValue { get; set; }
 
         public int Quantity { get; set; }
 

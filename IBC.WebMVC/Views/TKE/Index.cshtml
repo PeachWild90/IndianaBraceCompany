@@ -49,7 +49,7 @@
         <td>
             @Html.DisplayFor(modelItem => item.Quantity)
         </td>
-        <td><p>$399</p></td>
+        <td>@Html.DisplayFor(modelItem => item.PriceValue)</td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id = item.TKEId }) |
             @Html.ActionLink("Details", "Details", new { id = item.TKEId }) |
@@ -63,7 +63,7 @@
         <th></th>
         <th></th>
         <th>
-            $@(Model.Count() * 399)
+            
         </th>
         <th></th>
     </tr>

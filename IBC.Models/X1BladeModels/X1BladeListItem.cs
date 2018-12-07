@@ -15,7 +15,7 @@ namespace IBC.Models.X1BladeModels
         public string FootSize { get; set; }
         public Foot Foot { get; set; }
         public int Quantity { get; set; }
-        public int Price { get; set; }
+        public decimal PriceValue { get; set; }
 
     }
 }

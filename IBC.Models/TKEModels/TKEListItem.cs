@@ -13,6 +13,6 @@ namespace IBC.Models.TKEModels
         public int Quantity { get; set; }
         public int Price { get; set; }
         public string Reason { get; set; }
-
+        public decimal PriceValue { get; set; }
     }
 }

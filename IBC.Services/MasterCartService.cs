@@ -69,6 +69,7 @@ namespace IBC.Services
                         FaceMaskId = f.FaceMaskId,
                         Style = f.Style,
                         Quantity = f.Quantity,
+                        PriceValue = (f.Quantity * 249.99m)
                     }
                     );
                 }
@@ -79,7 +80,8 @@ namespace IBC.Services
                     {
                         X1BladeId = x.X1BladeId,
                         Injury = x.Injury,
-                        Quantity = x.Quantity
+                        Quantity = x.Quantity,
+                        PriceValue = (x.Quantity * 99.00m)
                     }
                     );
                 }
@@ -90,7 +92,8 @@ namespace IBC.Services
                     {
                         TKEId = t.TKEId,
                         Reason = t.Reason,
-                        Quantity = t.Quantity
+                        Quantity = t.Quantity,
+                        PriceValue = (t.Quantity * 399.00m)
                     }
                     );
                 }

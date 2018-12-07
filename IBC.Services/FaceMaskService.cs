@@ -44,18 +44,27 @@ namespace IBC.Services
         }
         
         //method needs to pull all quantities from DB, then multiply for a fixed amount
-        //public IndexView Calculate(int quantity, decimal price) 
+        //public decimal Calculate(int quantity) 
         //{
-        //     IndexView x = new IndexView();
-        //    var 
-                
-                   
-            
-        //    x.List = query.ToArray();
-        //    x.Price = decimal.Parse("249.99");
-
-        //    return ;
+        //    var priceValue = quantity * 249.99m;
+        //    return priceValue;
+             
         //}
+
+        public decimal Calculate(int quantity, decimal price)
+        {
+            IndexView x = new IndexView();
+
+            using (var ctx = new ApplicationDbContext())
+            {
+                var query = ctx.FaceMasks.Where(e => e.Quantity == quantity);
+
+            x.List = query.ToArray();
+            x.Price = quantity * 249.99m;
+
+                return price;
+            }
+        }
 
                             //we defined this earlier. It is connected to the view/css!
         public IEnumerable<FaceMaskListItem> GetFaceMasks() //This method shows us all the FaceMasks that belong to a specific user...
@@ -78,7 +87,8 @@ namespace IBC.Services
                                         Weight = e.Weight,
                                         Sport = e.Sport,
                                         Quantity = e.Quantity,
-                                        PriceValue = e.Quantity * e.PriceValue
+                                        PriceValue = (e.Quantity * 249.99m)
+
                                     }
                           );
 

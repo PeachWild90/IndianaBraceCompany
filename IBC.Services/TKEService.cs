@@ -50,6 +50,7 @@ namespace IBC.Services //push and pull TKE's from the database
                                     TKEId = e.TKEId,
                                     Reason = e.Reason,
                                     Quantity = e.Quantity,
+                                    PriceValue = (e.Quantity * 399.00m)
                                 }
                        );
 

@@ -53,7 +53,8 @@ namespace IBC.Services
                                     Injury = e.Injury,
                                     FootSize = e.FootSize,
                                     Foot = e.Foot,
-                                    Quantity = e.Quantity
+                                    Quantity = e.Quantity,
+                                    PriceValue = (e.Quantity * 99.99m)
                                 }
                         );
 
