@@ -9,6 +9,110 @@
     padding-right: 15px;
 }
 
+:root {
+    --font-one: 'Roboto Condensed', sans-serif;
+    --font-two: 'Orbitron', sans-serif;
+    --font-three: 'Yrsa', serif;
+    --font-four: 'Roboto', sans-serif;
+}
+
+#body{
+    background: url(./assets/images/oceanice.jpg) fixed, no-repeat;
+
+}
+/*NAVBAR-->*/
+
+.navbar-header{
+    font-family: var(--font-three);
+}
+.navbar-brand {
+    font-size: 20px;
+    outline-style: solid;
+    background: rgba(0,0,0,0.0);
+    margin: 5px 5px 5px 5px;
+}
+
+.navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
+    margin-left: -142px;
+    color: black;
+}
+
+.navbar-nav > li > a {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin: 1px 21px 3px 16px;
+    background: rgba(0,0,0,0.0);
+}
+
+#IBCLogo {
+    margin-right: 78px;
+    
+}
+#logoutForm{
+    margin-right: -76px;
+}
+
+.navbar-right {
+    float: right !important;
+    margin-right: -76px;
+}
+.navbar-nav{
+    background: rgba(0,0,0,0.0);
+    font-family: var(--font-three);
+    font-size: 20px;
+}
+
+.nav-navbar-nav{
+    float: right;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    /*background-color: #333;*/
+}
+
+li {
+    float: right;
+}
+
+li a {
+    outline-style:solid;
+    outline-color: black;
+    
+   display:flex;
+   color: black;
+   text-align: center;
+   padding: 14px 16px;
+   text-decoration: wavy;
+    }
+
+        /* Change the link color to #111 (black) on hover */
+li a:hover {
+    background-color: blue;
+        }
+.active {
+    background-color: black;
+}
+
+/*LEAD*/
+#jumbotronLead {
+    background-image: linear-gradient(to right, black, #78767C);
+    
+   
+}
+
+.carousel-caption {
+    font-family: var(--font-three);
+    font-size: larger; 
+}
+
+.lead {
+    color: white;
+    font-family: var(--font-three);
+}
 /* Override the default bootstrap behavior where horizontal description lists 
    will truncate terms that are too long to fit in the left column 
 */
@@ -22,3 +126,10 @@ select,
 textarea {
     max-width: 280px;
 }
+
+.d-block-d-horizontal{
+    width: 100%;
+}
+
+/*welcome / youtube links*/
+

@@ -1,25 +1,74 @@
 ﻿@{
-    ViewBag.Title = "Home Page";
+    ViewBag.Title = "Welcome!";
 }
 <br />
-<br />
-<div class="jumbotron" align="">
-    <h1>Indiana Brace Company</h1>
+
+
+<!--begin Bootstrap Carousel-->
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="5000">
+    <!-- Slide Indicators -->
+    <ol class="carousel-indicators">
+
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+
+    </ol>
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+        <div class="item active">
+            <a href="http://localhost:56166/FaceMask/Create?class=nav-link"</a>
+            <img src="~/Content/assets/images/basketballsunset.jpeg" alt="...">
+            <div class="carousel-caption">
+
+                <h3>Facemasks</h3>
+
+                <p>(Hoosier)</p>
+
+            </div>
+
+        </div>
+        <div class="item">
+            <a href="http://localhost:56166/TKE/Create?class=nav-link"</a>
+            <img src="~/Content/assets/images/X1Track.jpeg" alt="...">
+
+            <div class="carousel-caption">
+
+                <h3>Terminal Knee Extender</h3>
+
+                <p>TKE</p>
+
+            </div>
+        </div>
+        <div class="item">
+            <a href="http://localhost:56166/X1Blade/Create?class=nav-link"</a>
+            <img src="~/Content/assets/images/golf-sunset-sport-golfer.png" alt="...">
+            <div class="carousel-caption">
+
+                <h3>Clyde's Famous X1 Blades</h3>
+
+                <p>Turf Toe, Bunion Pain, Plantar Fasciitis, etc. </p>
+            </div>
+        </div>
+    </div>
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a> <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+    <!--end carousel-->
 </div>
-<br />
-<br />
-<div class="row" align="center">
-    <p>
-        <a href="http://localhost:56166/FaceMask/Create?class=nav-link" class="btn btn-primary btn-lg">FaceMasks &raquo;</a>
-        <a href="http://localhost:56166/X1Blade/Create?class=nav-link" class="btn btn-primary btn-lg">X1-Blades &raquo;</a>
-        <a href="http://localhost:56166/TKE/Create?class=nav-link" class="btn btn-primary btn-lg">TKE &raquo;</a>
-    </p>
-</div>
-<br />
-<br />
-<br />
-<div class="jumbotron" align="center">
-    
+
+
+
+<div class="jumbotron" align="center" id="jumbotronLead">
+
     <p class="lead">
         IndianaBraceStore.com has been in business as an online retailer for over 18 years,
         with over 50 years of orthotic service in Indiana at Indiana Brace, LLC. With experience and personal attention,
@@ -27,7 +76,7 @@
     </p>
 </div>
 
-<div class="row" align ="center">
+<div class="row" align="center">
     <div class="col-md-4">
         <h2>Welcome to IBC</h2>
         <p>
@@ -44,3 +93,13 @@
         <p><a class="btn btn-default" href="https://www.youtube.com/user/clydepeach">Watch Now! &raquo;</a></p>
     </div>
 </div>
+
+<!--latest jQuery 3-->
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+
+
+
+<!--Bootstrap JS-->
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>

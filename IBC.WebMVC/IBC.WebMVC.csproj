@@ -210,6 +210,22 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\assets\images\basketballsunset.jpeg" />
+    <Content Include="Content\assets\images\earth.jpg" />
+    <Content Include="Content\assets\images\earth2.jpg" />
+    <Content Include="Content\assets\images\frozenocean.jpg" />
+    <Content Include="Content\assets\images\golf-sunset-sport-golfer.png" />
+    <Content Include="Content\assets\images\green.jpg" />
+    <Content Include="Content\assets\images\kyriefm.jpg" />
+    <Content Include="Content\assets\images\oceanice.jpg" />
+    <Content Include="Content\assets\images\skyfrozen.jpg" />
+    <Content Include="Content\assets\images\snow1.jpg" />
+    <Content Include="Content\assets\images\snow2.jpg" />
+    <Content Include="Content\assets\images\snow3.jpg" />
+    <Content Include="Content\assets\images\snowicesplit.jpg" />
+    <Content Include="Content\assets\images\soccersunset.jpeg" />
+    <Content Include="Content\assets\images\TKE4PVC.jpg" />
+    <Content Include="Content\assets\images\X1Track.jpeg" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
