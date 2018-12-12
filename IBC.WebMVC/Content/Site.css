@@ -17,84 +17,93 @@
 }
 
 #body{
-    background: url(./assets/images/oceanice.jpg) fixed, no-repeat;
+    background: url(./assets/images/earth2.jpg) fixed, no-repeat;
 
 }
 /*NAVBAR-->*/
 
+.navbar{
+    margin-bottom: -15px;
+}
 .navbar-header{
     font-family: var(--font-three);
 }
 .navbar-brand {
     font-size: 20px;
     outline-style: solid;
-    background: rgba(0,0,0,0.0);
-    margin: 5px 5px 5px 5px;
+    color: white;
+    position: relative;
+    font-family: var(--font-one)
 }
 
 .navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
-    margin-left: -142px;
     color: black;
+    font-style: var(--font-two)
 }
 
-.navbar-nav > li > a {
-    padding-top: 15px;
-    padding-bottom: 15px;
-    margin: 1px 21px 3px 16px;
-    background: rgba(0,0,0,0.0);
-}
-
-#IBCLogo {
-    margin-right: 78px;
-    
-}
 #logoutForm{
-    margin-right: -76px;
+    /*margin-right: -76px;*/
 }
 
 .navbar-right {
-    float: right !important;
-    margin-right: -76px;
+    /*float: right;
+    margin-right: -76px;*/
 }
 .navbar-nav{
-    background: rgba(0,0,0,0.0);
+    
     font-family: var(--font-three);
     font-size: 20px;
 }
 
-.nav-navbar-nav{
-    float: right;
+.nav-item active{
+    /*padding-left: 10px;*/
 }
 
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    /*background-color: #333;*/
-}
-
-li {
-    float: right;
+#logoutForm{
+    font-family: var(--font-two)
 }
 
 li a {
-    outline-style:solid;
-    outline-color: black;
-    
-   display:flex;
-   color: black;
-   text-align: center;
-   padding: 14px 16px;
-   text-decoration: wavy;
-    }
+    outline-style: double;
+    outline-color: white;
+    display: grid;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: wavy;
 
-        /* Change the link color to #111 (black) on hover */
-li a:hover {
-    background-color: blue;
-        }
-.active {
+}
+
+nav li:hover{
+    color:blue;
+    background-color: rgba(0,0,0,0.0)
+}
+li:hover {
+    color: blue;
     background-color: black;
+}
+
+.nav-item {
+    color: black;
+   
+}
+
+li a:hover {
+    color: cornflowerblue;
+    background-color: rgba(0,0,0,0.0);
+    font-style: italic;
+}
+
+#facemask:hover{
+    background-color: black;
+}
+
+
+
+.carousel-inner > .item > a > img{
+    width:1200px;
+    height:900px;
+    opacity: .75;
 }
 
 /*LEAD*/
@@ -133,3 +142,90 @@ textarea {
 
 /*welcome / youtube links*/
 
+/*col-md-4{
+    color: white;
+}*/
+#youtube{
+    color: white;
+    float: left;
+}
+
+/*FACEMASK VIEWs*/
+
+h2 {
+    color: white;
+    margin-top: 60px;
+    outline: thin;
+    outline-color: black;
+    font-family: var(--font-three)
+}
+
+h3{
+    font-size: 35px;
+    
+}
+
+h4 {
+    color: white;
+    outline: thin;
+    outline-color: black;
+    font-family: var(--font-three)
+}
+
+label.control-label.col-md-2{
+    color: white;
+    outline: thick;
+    outline-color: black;
+    font-size: 16px;
+}
+
+a{
+    color: aqua;
+    font-family: var(--font-one)
+}
+
+th {
+    color: white;
+    font-family: var(--font-three);
+    font-size: 25px;
+}
+
+td {
+    color: white;
+    font-family: var(--font-three);
+    font-size: 20px;
+}
+
+p{
+    color:azure;
+    font-size: 15px;
+}
+
+a.button1{
+    display: inline-block;
+    padding: 0.35em 1.2em;
+    border: 0.1em solid #FFFFFF;
+    margin: 0 0.3em 0.3em 0;
+    border-radius: 0.12em;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: var(--font-one);
+    font-weight: 300;
+    color: #FFFFFF;
+    text-align: center;
+    transition: all 0.2s;
+}
+
+a.button1:hover{
+    color: #000000;
+    background-color: #FFFFFF;
+}
+
+@media all and (max-width:30em) {
+    a.button1 {
+        display: block;
+        margin: 0.4em auto;
+    }
+}
+
+ 
