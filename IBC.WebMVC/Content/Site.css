@@ -57,9 +57,6 @@
     font-style: var(--font-two)
 }
 
-#logoutForm{
-    /*margin-right: -76px;*/
-}
 
 .navbar-right {
     float: right;
@@ -73,9 +70,6 @@
     font-size: 20px;
 }
 
-.nav-item active{
-    /*padding-left: 10px;*/
-}
 
 #logoutForm{
     font-family: var(--font-two)
@@ -101,7 +95,6 @@ li a {
     border: 0.1em solid #FFFFFF;
     margin: 0 0.3em 0.3em 0;
     border-radius: 0.12em;
-    box-sizing: border-box;
     text-decoration: none;
     font-family: var(--font-one);
     font-weight: 300;
@@ -208,19 +201,23 @@ h2 {
     font-family: var(--font-three)
 }
 
-h3{
-    font-size: 35px;
-    
-}
-
-h4 {
+h3 {
+    font-size: 12px;
     color: white;
     outline: thin;
     outline-color: black;
     font-family: var(--font-three)
 }
 
-label.control-label.col-md-2 {
+h4 {
+    font-size: 20px;
+    color: white;
+    outline: thin;
+    outline-color: black;
+    font-family: var(--font-three)
+}
+
+col-md-2 {
     color: white;
     outline: 10px;
     outline-color: white;
@@ -234,6 +231,16 @@ a{
     font-family: var(--font-one);
     font-size: 19px
 }
+
+a:hover{
+    text-decoration: none;
+    color: white;
+}
+
+    a:active {
+        text-decoration: none;
+        color: white;
+    }
 
 dd {
     color: white;
@@ -278,13 +285,13 @@ input.btn.btn-default {
     border: 0.1em solid #FFFFFF;
     margin: 0 0.3em 0.3em 0;
     border-radius: 0.12em;
-    box-sizing: border-box;
     text-decoration: none;
     font-family: var(--font-one);
     font-weight: 300;
     background-color: rgba(0,0,0,0.0);  
     text-align: center;
     transition: all 0.2s;
+    color: white;
 }
 
     input.btn.btn-default:hover {
@@ -305,7 +312,6 @@ a.button1 {
     border: 0.1em solid #FFFFFF;
     margin: 0 0.3em 0.3em 0;
     border-radius: 0.12em;
-    box-sizing: border-box;
     text-decoration: none;
     font-family: var(--font-one);
     font-weight: 300;
@@ -318,6 +324,11 @@ a.button1:hover{
     color: #000000;
     background-color: #FFFFFF;
 }
+
+    a.button1:active {
+        color: #000000;
+        background-color: #FFFFFF;
+    }
 
 @media all and (max-width:30em) {
     a.button1 {
