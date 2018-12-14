@@ -16,9 +16,8 @@
 <body id="body">
 
     <div class="row" align="center">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        </button>
-         @Html.ActionLink("Indiana Brace Company", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"></button>
+        @Html.ActionLink("Indiana Brace Company", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
     </div>
 
     <nav class="navbar navbar-expand-lg navbar-black bg-black" id="nav-style">
@@ -36,20 +35,22 @@
                 <li class="nav-item active">@Html.ActionLink("Terminal Knee Extender", "index", "TKE", new { @class = "nav-link" }, null)</li>
             </ul>
             <!-- <form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form> -->
+              <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form> -->
         </div>
-        <div>
-        @Html.Partial("_LoginPartial")
-        </div>
+        
     </nav>
+
+    <div>
+        @Html.Partial("_LoginPartial")
+    </div>
 
     <div class="container body-content">
         @RenderBody() @*views are insterted here*@
         <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - Indiana Brace Company</p>
+        <footer >
+            <p id="footer">&copy; @DateTime.Now.Year - Indiana Brace Company</p>
         </footer>
     </div>
 

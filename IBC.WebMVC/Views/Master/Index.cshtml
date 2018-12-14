@@ -10,16 +10,15 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.X1BladeId)
+            X1 Blades
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Injury)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Quantity)
-        </th>
         <th>
-            <p>Price</p>
+            <p id="price">Price</p>
         </th>
        
     </tr>
@@ -31,7 +30,7 @@
 
             <tr>
                 <td>
-                    @Html.DisplayFor(modelItem => item.X1BladeId)
+                    @*@Html.DisplayFor(modelItem => item.X1BladeId)*@
                 </td>
                 <td>
                     @Html.DisplayFor(modelitem => item.Injury)
@@ -42,20 +41,20 @@
                 <td>
                     @Html.DisplayFor(modelItem => item.PriceValue)
                 </td>
-                <td></td>
+               
             </tr>
         }
     }
 
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.TKEId)
+            Terminal Knee Extender
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Reason)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Quantity)
+            @*@Html.DisplayNameFor(model => model.Quantity)*@
         </th>   
         <th></th>
     </tr>
@@ -66,7 +65,7 @@
         {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.TKEId)
+                @*@Html.DisplayFor(modelItem => item.TKEId)*@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Reason)
@@ -77,20 +76,19 @@
             <td>
                 @Html.DisplayFor(modelItem => item.PriceValue)
             </td>
-            <td></td>
+            <
         </tr>
         }
     }
 
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.FaceMaskId)
-        </th>
+            Face Masks
         <th>
             @Html.DisplayNameFor(model => model.Style)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Quantity)
+            @*@Html.DisplayNameFor(model => model.Quantity)*@
         </th>
         <th></th>
     </tr>
@@ -101,7 +99,7 @@
         {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.FaceMaskId)
+                @*@Html.DisplayFor(modelItem => item.FaceMaskId)*@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Style)
@@ -112,7 +110,7 @@
             <td>
                 @Html.DisplayFor(modelItem => item.PriceValue)
             </td>
-            <td></td>
+            
         </tr>
         }
     }
@@ -120,9 +118,9 @@
     <tr>
         <th></th>
         <th></th>
-        <th><p>Total Price</p></th>
+        <th><p id="totalPrice">Total Price</p></th>
         <th>$@(Model.Sum(x => x.PriceValue))</th>
-        <th></th>
+        
 
     </tr>
 </table>

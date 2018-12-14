@@ -220,8 +220,10 @@
     <Content Include="Content\assets\images\frozenocean.jpg" />
     <Content Include="Content\assets\images\golf-sunset-sport-golfer.png" />
     <Content Include="Content\assets\images\green.jpg" />
+    <Content Include="Content\assets\images\Invoice6325Madrid.jpg" />
     <Content Include="Content\assets\images\kyriefm.jpg" />
     <Content Include="Content\assets\images\oceanice.jpg" />
+    <Content Include="Content\assets\images\raptors5.jpg" />
     <Content Include="Content\assets\images\skyfrozen.jpg" />
     <Content Include="Content\assets\images\snow1.jpg" />
     <Content Include="Content\assets\images\snow2.jpg" />
@@ -232,6 +234,7 @@
     <Content Include="Content\assets\images\TKE4PVC.jpg" />
     <Content Include="Content\assets\images\TKEFinal.jpg" />
     <Content Include="Content\assets\images\X1-1000.jpg" />
+    <Content Include="Content\assets\images\X1Blade7485.jpg" />
     <Content Include="Content\assets\images\X1Final.jpg" />
     <Content Include="Content\assets\images\X1Track.jpeg" />
     <Content Include="Content\bootstrap-theme.css" />

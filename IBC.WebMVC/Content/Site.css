@@ -3,6 +3,10 @@
     padding-bottom: 20px;
 }
 
+.row {
+    margin-left: 0;
+    margin-right: 0;
+}
 /* Set padding to keep content from hitting the edges */
 .body-content {
     padding-left: 15px;
@@ -24,17 +28,29 @@
 
 .navbar{
     margin-bottom: -15px;
+    margin-left: 58rem;
+    margin-right: 10rem;
+
+
 }
 .navbar-header{
     font-family: var(--font-three);
 }
 .navbar-brand {
-    font-size: 20px;
-    outline-style: solid;
+    font-size: 30px;
+    /*outline-style: solid;*/
     color: white;
     position: relative;
-    font-family: var(--font-one)
+    font-family: var(--font-one);
+    margin-left: 6rem; 
+    padding-bottom: 3rem;
 }
+
+.navbar-brand:hover{
+    color:white;
+    font-style:italic;
+}
+
 
 .navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
     color: black;
@@ -46,8 +62,10 @@
 }
 
 .navbar-right {
-    /*float: right;
-    margin-right: -76px;*/
+    float: right;
+    margin-right: 1px;
+    margin-top:-7.4rem;
+    
 }
 .navbar-nav{
     
@@ -63,15 +81,46 @@
     font-family: var(--font-two)
 }
 
-li a {
+/*li a {
     outline-style: double;
     outline-color: white;
     display: grid;
     color: white;
     text-align: center;
     padding: 14px 16px;
-    text-decoration: wavy;
+    text-decoration: solid;
+    margin-left: 5rem;
+    margin-top: 2px;
+    display: inline-block;
+    
+}*/
 
+li a {
+    display: inline-block;
+    padding: 0.35em 1.2em;
+    border: 0.1em solid #FFFFFF;
+    margin: 0 0.3em 0.3em 0;
+    border-radius: 0.12em;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: var(--font-one);
+    font-weight: 300;
+    color: #FFFFFF;
+    text-align: center;
+    transition: all 0.2s;
+    
+}
+
+    li a:hover {
+        color: #000000;
+        background-color: #FFFFFF;
+    }
+
+ @media all and (max-width:30em) {
+    li a {
+        display: block;
+        margin: 0.4em auto;
+    }
 }
 
 nav li:hover{
@@ -79,29 +128,28 @@ nav li:hover{
     background-color: rgba(0,0,0,0.0)
 }
 li:hover {
-    color: blue;
-    background-color: black;
+    color: red;
+    background-color: rgba(0,0,0,0.0)
 }
+
+/*a:hover {
+    color: #000000;
+    background-color: #FFFFFF;
+    text-decoration: none;
+}*/
 
 .nav-item {
     color: black;
-   
 }
 
-li a:hover {
+/*li a:hover {
     color: cornflowerblue;
     background-color: rgba(0,0,0,0.0);
-    font-style: italic;
-}
-
-#facemask:hover{
-    background-color: black;
-}
-
-
+    font-style: initial;
+}*/
 
 .carousel-inner > .item > a > img{
-    width:1200px;
+    width:1250px;
     height:900px;
     opacity: .75;
 }
@@ -109,7 +157,7 @@ li a:hover {
 /*LEAD*/
 #jumbotronLead {
     background-image: linear-gradient(to right, black, #78767C);
-    
+    opacity: .70
    
 }
 
@@ -140,15 +188,15 @@ textarea {
     width: 100%;
 }
 
-/*welcome / youtube links*/
-
-/*col-md-4{
-    color: white;
-}*/
-#youtube{
-    color: white;
-    float: left;
+#price{
+    font-size: 25px;
 }
+
+#totalPrice{
+    font-size: 26px;
+}
+
+
 
 /*FACEMASK VIEWs*/
 
@@ -172,16 +220,31 @@ h4 {
     font-family: var(--font-three)
 }
 
-label.control-label.col-md-2{
+label.control-label.col-md-2 {
     color: white;
-    outline: thick;
-    outline-color: black;
-    font-size: 16px;
+    outline: 10px;
+    outline-color: white;
+    font-size: 20px;
+    font-family: var(--font-three);
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
 a{
     color: aqua;
-    font-family: var(--font-one)
+    font-family: var(--font-one);
+    font-size: 19px
+}
+
+dd {
+    color: white;
+    font-family: var(--font-three);
+    font-size: 25px;
+}
+
+dt {
+    color: white;
+    font-family: var(--font-three);
+    font-size: 25px;
 }
 
 th {
@@ -198,10 +261,45 @@ td {
 
 p{
     color:azure;
-    font-size: 15px;
+    font-size: 25px;
 }
 
-a.button1{
+table {
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+input.btn.btn-default {
+    display: inline-block;
+    padding: 0.35em 1.2em;
+    border: 0.1em solid #FFFFFF;
+    margin: 0 0.3em 0.3em 0;
+    border-radius: 0.12em;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: var(--font-one);
+    font-weight: 300;
+    background-color: rgba(0,0,0,0.0);  
+    text-align: center;
+    transition: all 0.2s;
+}
+
+    input.btn.btn-default:hover {
+        color: #000000;
+        background-color: #FFFFFF;
+    }
+
+@media all and (max-width:30em) {
+    input.btn.btn-default {
+        display: block;
+        margin: 0.4em auto;
+    }
+}
+
+a.button1 {
     display: inline-block;
     padding: 0.35em 1.2em;
     border: 0.1em solid #FFFFFF;
@@ -228,4 +326,6 @@ a.button1:hover{
     }
 }
 
- 
+#footer{
+    font-size: 15px;
+}
