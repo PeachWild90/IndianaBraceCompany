@@ -107,6 +107,4 @@ namespace IBC.Services //push and pull TKE's from the database
             }
         }
     }
-
-
 }

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace IBC.Services
 {
-   public class MasterCartService
+    public class MasterCartService
     {
         private readonly Guid _userId;
 
@@ -27,7 +27,7 @@ namespace IBC.Services
                     FaceMaskId = model.FaceMaskId,
                     TKEId = model.TKEId,
                     X1BladeId = model.X1BladeId
-                    
+
                 };
 
             using (var ctx = new ApplicationDbContext())
@@ -37,7 +37,7 @@ namespace IBC.Services
             }
         }
 
-        public IEnumerable<MasterCartList> GetMasterCarts() 
+        public IEnumerable<MasterCartList> GetMasterCarts()
         {
             using (var ctx = new ApplicationDbContext()) //snapshot of state of db
             {
@@ -51,7 +51,7 @@ namespace IBC.Services
                 var fmQuery =
                    ctx.FaceMasks //snapshot of fm table
                    .Where(e => e.OwnerId == _userId); //asserts we only taking out of fm when id is correct. specific collection of fm by ID
-           
+
 
                 var x1Query =
                     ctx.X1Blades
@@ -60,9 +60,9 @@ namespace IBC.Services
                 var tkeQuery =
                     ctx.TKEs
                     .Where(e => e.OwnerId == _userId);
-                
 
-               foreach(var f in fmQuery) //repackaging properties into new MasterCartList object, sending it back to index
+
+                foreach (var f in fmQuery) //repackaging properties into new MasterCartList object, sending it back to index
                 {
                     carts.Add(new MasterCartList
                     {
@@ -74,7 +74,7 @@ namespace IBC.Services
                     );
                 }
 
-               foreach(var x in x1Query)
+                foreach (var x in x1Query)
                 {
                     carts.Add(new MasterCartList
                     {
@@ -86,7 +86,7 @@ namespace IBC.Services
                     );
                 }
 
-               foreach(var t in tkeQuery)
+                foreach (var t in tkeQuery)
                 {
                     carts.Add(new MasterCartList
                     {
@@ -101,7 +101,6 @@ namespace IBC.Services
             }
         }
 
-       
         //TODO: 
         //make a list of master items ?
 

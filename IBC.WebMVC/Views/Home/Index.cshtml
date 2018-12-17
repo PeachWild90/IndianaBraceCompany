@@ -2,79 +2,59 @@
     ViewBag.Title = "Welcome!";
 }
 <br />
-<!--begin Bootstrap Carousel-->
+
 <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="5000">
-    <!-- Slide Indicators -->
     <ol class="carousel-indicators">
-
         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-
         <li data-target="#myCarousel" data-slide-to="1"></li>
-
         <li data-target="#myCarousel" data-slide-to="2"></li>
-
         <li data-target="#myCarousel" data-slide-to="3"></li>
     </ol>
-    <!-- Wrapper for slides -->
-    <div class="carousel-inner" role="listbox">
-        <div class="item active">
-            <a href="http://localhost:56166/FaceMask/Create?class=nav-link">
-
-                <img src="~/Content/assets/images/FMFinal.jpg" alt="...">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <a href="./FaceMask/Create">
+                <img class="d-block w-100" src="~/Content/assets/images/FMFinal.jpg" alt="First slide">
             </a>
             <div class="carousel-caption">
-
                 <h3>Face Masks</h3>
-
                 <p>(Madrid Model)</p>
-
             </div>
-
         </div>
-        <div class="item">
-            <a href="http://localhost:56166/TKE/Create?class=nav-link">
-                <img src="~/Content/assets/images/TKEFinal.jpg" alt="...">
+        <div class="carousel-item">
+            <a href="./X1Blade/Create">
+                <img class="d-block w-100" src="~/Content/assets/images/TKEFinal2.jpg" alt="Second slide">
             </a>
             <div class="carousel-caption">
-
-                <h3>Terminal Knee Extender</h3>
-
+                <h3 id="tke">Terminal Knee Extender</h3>
                 <p>TKE</p>
-
             </div>
         </div>
-        <div class="item">
-            <a href="https://www.youtube.com/user/clydepeach">
-                <img src="~/Content/assets/images/kyriefm.jpg" alt="...">
+        <div class="carousel-item">
+            <a href="./TKE/Create">
+                <img class="d-block w-100" src="~/Content/assets/images/X1BladeFINALLY.jpg" alt="Fourth slide">
             </a>
             <div class="carousel-caption">
-
-                <h3>Indiana Brace on Youtube!</h3>
-
-                <p>Curious about FaceMask design, durability, and overall impressions? Check out our Youtube page! </p>
-            </div>
-        </div>
-        <div class="item">
-            <a href="http://localhost:56166/X1Blade/Create?class=nav-link">
-                <img src="~/Content/assets/images/X1Blade7485.jpg" alt="...">
-            </a>
-            <div class="carousel-caption">
-
                 <h3>Clyde's Famous X1 Blades</h3>
-
                 <p>Turf Toe, Bunion Pain, Plantar Fasciitis, etc. </p>
             </div>
         </div>
+        <div class="carousel-item">
+            <a href="https://www.youtube.com/user/clydepeach">
+                <img class="d-block w-100" src="~/Content/assets/images/youtube.jpg" alt="Third slide">
+            </a>
+            <div class="carousel-caption">
+                <h3 id="youtube">Indiana Brace on Youtube!</h3>
+                <p>Curious about FaceMask design, durability, and overall impressions? Check out our Youtube page! </p>
+            </div>
+        </div>
     </div>
-    <!-- Left and right controls -->
-    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="sr-only">Previous</span>
-    </a> <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    </a> <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="sr-only">Next</span>
     </a>
-    <!--end carousel-->
 </div>
 
 <div class="jumbotron" align="center" id="jumbotronLead">
@@ -83,14 +63,14 @@
         IndianaBraceStore.com has been in business as an online retailer for over 18 years,
         with over 50 years of orthotic service in Indiana at Indiana Brace, LLC. With experience and personal attention,
         our company has established itself as one of the leading online medical sites.
+
+        CALL CLYDE (317) 445 - 1475
     </p>
 </div>
 
 <!--latest jQuery 3-->
 
 <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-
-
 
 <!--Bootstrap JS-->
 

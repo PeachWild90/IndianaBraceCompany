@@ -227,10 +227,13 @@
     <Content Include="Content\assets\images\TKE1000.jpg" />
     <Content Include="Content\assets\images\TKE4PVC.jpg" />
     <Content Include="Content\assets\images\TKEFinal.jpg" />
+    <Content Include="Content\assets\images\TKEFinal2.jpg" />
     <Content Include="Content\assets\images\X1-1000.jpg" />
     <Content Include="Content\assets\images\X1Blade7485.jpg" />
+    <Content Include="Content\assets\images\X1BladeFINALLY.jpg" />
     <Content Include="Content\assets\images\X1Final.jpg" />
     <Content Include="Content\assets\images\X1Track.jpeg" />
+    <Content Include="Content\assets\images\youtube.jpg" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-reboot.css" />

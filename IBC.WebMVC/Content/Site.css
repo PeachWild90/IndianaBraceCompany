@@ -4,8 +4,10 @@
 }
 
 .row {
+    margin-top: -15px;
     margin-left: 0;
     margin-right: 0;
+    display: block;
 }
 /* Set padding to keep content from hitting the edges */
 .body-content {
@@ -28,22 +30,23 @@
 
 .navbar{
     margin-bottom: -15px;
-    margin-left: 58rem;
-    margin-right: 10rem;
+    margin-left: 39rem;
+    margin-right: 0;
+    display: block;
 
 
 }
+
 .navbar-header{
     font-family: var(--font-three);
 }
 .navbar-brand {
     font-size: 30px;
-    /*outline-style: solid;*/
     color: white;
     position: relative;
     font-family: var(--font-one);
-    margin-left: 6rem; 
-    padding-bottom: 3rem;
+    margin-left: 0; 
+    padding-bottom: 0;
 }
 
 .navbar-brand:hover{
@@ -51,43 +54,29 @@
     font-style:italic;
 }
 
-
 .navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
     color: black;
     font-style: var(--font-two)
 }
 
-
 .navbar-right {
-    float: right;
-    margin-right: 1px;
-    margin-top:-7.4rem;
     
+    float: right;
+    margin-right: 20px;
+    margin-left: 8rem;
+    
+    position: relative;
 }
+
 .navbar-nav{
     
     font-family: var(--font-three);
     font-size: 20px;
 }
 
-
 #logoutForm{
     font-family: var(--font-two)
 }
-
-/*li a {
-    outline-style: double;
-    outline-color: white;
-    display: grid;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: solid;
-    margin-left: 5rem;
-    margin-top: 2px;
-    display: inline-block;
-    
-}*/
 
 li a {
     display: inline-block;
@@ -104,7 +93,7 @@ li a {
     
 }
 
-    li a:hover {
+ li a:hover {
         color: #000000;
         background-color: #FFFFFF;
     }
@@ -118,32 +107,21 @@ li a {
 
 nav li:hover{
     color:blue;
+    background-color: black;
     background-color: rgba(0,0,0,0.0)
 }
 li:hover {
     color: red;
+    background-color: black;
     background-color: rgba(0,0,0,0.0)
 }
-
-/*a:hover {
-    color: #000000;
-    background-color: #FFFFFF;
-    text-decoration: none;
-}*/
 
 .nav-item {
     color: black;
 }
 
-/*li a:hover {
-    color: cornflowerblue;
-    background-color: rgba(0,0,0,0.0);
-    font-style: initial;
-}*/
-
-.carousel-inner > .item > a > img{
-    width:1250px;
-    height:900px;
+.carousel-inner {
+    
     opacity: .75;
 }
 
@@ -155,17 +133,24 @@ li:hover {
 }
 
 .carousel-caption {
+    font-size: 25px;
     font-family: var(--font-three);
     font-size: larger; 
+}
+
+.d-block.w-100{
+    width: 100%;
+    height: 100%;
+    max-height:800px;
+    max-width:1200px;
+    overflow: hidden;
 }
 
 .lead {
     color: white;
     font-family: var(--font-three);
 }
-/* Override the default bootstrap behavior where horizontal description lists 
-   will truncate terms that are too long to fit in the left column 
-*/
+
 .dl-horizontal dt {
     white-space: normal;
 }
@@ -175,10 +160,6 @@ input,
 select,
 textarea {
     max-width: 280px;
-}
-
-.d-block-d-horizontal{
-    width: 100%;
 }
 
 #price{
@@ -201,29 +182,48 @@ h2 {
     font-family: var(--font-three)
 }
 
-h3 {
+.h3 {
     font-size: 12px;
     color: white;
-    outline: thin;
+    outline: thick;
     outline-color: black;
-    font-family: var(--font-three)
+    font-family: 'Yrsa', serif;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    
 }
 
 h4 {
     font-size: 20px;
     color: white;
     outline: thin;
-    outline-color: black;
-    font-family: var(--font-three)
+    font-family: 'Yrsa', serif;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
-col-md-2 {
+.col-md-2 {
     color: white;
     outline: 10px;
     outline-color: white;
     font-size: 20px;
-    font-family: var(--font-three);
+    font-family: 'Yrsa', serif;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+#youtube{
+    color: black;
+    padding-top: 10rem;
+    margin-bottom: -3.5rem
+}
+
+#tke{
+    color: black;
+    margin-left: -20px;
+    text-shadow: 1px 1px white
+}
+
+#clyde{
+    margin-top:-45px;
+    font-family: 'Yrsa', serif;
 }
 
 a{
@@ -304,6 +304,13 @@ input.btn.btn-default {
         display: block;
         margin: 0.4em auto;
     }
+}
+
+.navbar-toggle{
+    background-color:black;
+    background-color: rgba(0,0,0,0.0);
+
+    
 }
 
 a.button1 {
