@@ -288,6 +288,7 @@ input.btn.btn-default {
     text-decoration: none;
     font-family: var(--font-one);
     font-weight: 300;
+    background-color: black;
     background-color: rgba(0,0,0,0.0);  
     text-align: center;
     transition: all 0.2s;
