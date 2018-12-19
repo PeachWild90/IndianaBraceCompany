@@ -13,6 +13,11 @@ using IBC.Data;
 
 namespace IBC.WebMVC.Controllers
 {
+
+#if !DEBUG         //set up the app to require HTTPS unless we are in debug mode
+    [RequireHttps]
+
+#endif  // "Preprocessor directives"
     [Authorize]
     public class AccountController : Controller
     {
@@ -424,7 +429,7 @@ namespace IBC.WebMVC.Controllers
             base.Dispose(disposing);
         }
 
-        #region Helpers
+#region Helpers
         // Used for XSRF protection when adding external logins
         private const string XsrfKey = "XsrfId";
 
@@ -481,6 +486,6 @@ namespace IBC.WebMVC.Controllers
                 context.HttpContext.GetOwinContext().Authentication.Challenge(properties, LoginProvider);
             }
         }
-        #endregion
+#endregion
     }
 }

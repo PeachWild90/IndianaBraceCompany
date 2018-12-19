@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IBC.Services", "IBC.Service
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IBC.Tests", "IBC.Tests\IBC.Tests.csproj", "{50236557-CB9C-44D3-AAF0-2F9821B51D39}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IBC.WebApi", "IBC.WebApi\IBC.WebApi.csproj", "{3C310AC6-F153-4081-BEE3-0EFA7EF6CC12}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{50236557-CB9C-44D3-AAF0-2F9821B51D39}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{50236557-CB9C-44D3-AAF0-2F9821B51D39}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{50236557-CB9C-44D3-AAF0-2F9821B51D39}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C310AC6-F153-4081-BEE3-0EFA7EF6CC12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C310AC6-F153-4081-BEE3-0EFA7EF6CC12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C310AC6-F153-4081-BEE3-0EFA7EF6CC12}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C310AC6-F153-4081-BEE3-0EFA7EF6CC12}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
